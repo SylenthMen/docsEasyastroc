@@ -1,0 +1,44 @@
+---
+title: Card
+description: Documentación del componente Card, que incluye el uso y las props que recibe.
+---
+
+import {Card} from 'easyastroc'
+
+# Componente Card
+
+El componente `Card` se utiliza para mostrar contenido visualmente atractivo en forma de una tarjeta. Cada tarjeta incluye una imagen, un título, una descripción y permite personalizar el estilo del contenedor, el título y la descripción.
+
+## Props
+
+- `title` (string): El título que aparecerá en la tarjeta.
+- `description` (string): La descripción que se mostrará en el cuerpo de la tarjeta.
+- `image` (string): La URL de la imagen que se mostrará en la parte superior de la tarjeta.
+- `cardStyle` (string): Clases CSS para aplicar estilos personalizados al contenedor de la tarjeta.
+- `titleStyle` (string): Clases CSS para estilizar el título de la tarjeta.
+- `descriptionStyle` (string): Clases CSS para estilizar la descripción de la tarjeta.
+
+## Ejemplo de uso
+
+A continuación, un ejemplo de cómo utilizar el componente `Card`:
+
+```astro
+<Card
+  title="Título de la tarjeta"
+  description="Hola, soy una descripción de la tarjeta"
+  image="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+  cardStyle="bg-[#002f24] backdrop-blur-md text-[#05ce91]"
+  titleStyle="text-[#05ce91] font-bold text-2xl"
+  descriptionStyle="text-[#05ce91]"
+/>
+```
+
+## Apariencia
+<Card
+  title="Título de la tarjeta"
+  description="Hola, soy una descripción de la tarjeta"
+  image="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+  cardStyle="bg-[#002f24] backdrop-blur-md text-[#05ce91] overflow-hidden w-96 "
+  titleStyle="text-[#05ce91] font-bold text-2xl"
+  descriptionStyle="text-[#05ce91]"
+/>

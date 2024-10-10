@@ -1,0 +1,32 @@
+---
+title: Badge
+description: Documentación del componente Badge, que incluye el uso y las props que recibe.
+---
+
+import {Badge} from 'easyastroc'
+
+# Componente Badge
+
+El componente `Badge` es ideal para mostrar etiquetas o insignias que representan el estado de un elemento, como un artículo. Cada `Badge` tiene un texto y un estado, lo que permite que sea estilizado según el contexto.
+
+## Props
+
+- `text` (string): El texto que se mostrará en la etiqueta.
+- `estado` (string): El estado del elemento, que puede ser utilizado para aplicar estilos condicionales (ej: "nuevo", "aprobado", "borrado", "pendiente").
+
+## Ejemplo de uso
+
+A continuación, un ejemplo de cómo utilizar el componente `Badge` para representar diferentes estados de un artículo:
+
+```astro
+<Badge text="artículo nuevo" estado="nuevo" />
+<Badge text="artículo aprobado" estado="aprobado" />
+<Badge text="artículo borrado" estado="borrado" />
+<Badge text="artículo pendiente" estado="pendiente" />
+```
+## Apariencia
+
+<Badge text="artículo nuevo" estado="nuevo" />
+<Badge text="artículo aprobado" estado="aprobado" />
+<Badge text="artículo borrado" estado="borrado" />
+<Badge text="artículo pendiente" estado="pendiente" />

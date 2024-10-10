@@ -1,0 +1,60 @@
+---
+title: Instalación
+description: Guía de instalación de easyastroc
+---
+import { Acordion } from 'easyastroc'
+
+Bienvenido a la guía de instalación de **easyastroc**, una librería diseñada para facilitar el desarrollo con Astro. Sigue los pasos a continuación para integrar la librería en tu proyecto.
+
+## Requisitos Previos
+
+Antes de empezar, asegúrate de tener lo siguiente:
+
+- [Node.js](https://nodejs.org/) instalado.
+- Un proyecto Astro existente. Si no tienes uno, puedes crear uno ejecutando:
+  ```bash
+  npm create astro@latest
+  ```
+- Tailwindcss instalado.
+
+
+## Instalacion de la libreria
+
+Una vez que tengas tu proyecto Astro configurado, puedes instalar la librería con el siguiente comando:
+
+```bash
+  npm install easyastroc
+```
+
+## Importación de la libreria
+
+una vez instalada la libreria puedes importar los componentes de la siguiente manera:
+
+```js
+---
+import { Acordion } from 'easyastroc';
+---
+```
+
+## Uso de la libreria
+
+Ahora puedes usar los componentes de la libreria en tu código Astro. Por ejemplo, puedes crear un acordion con el siguiente código:
+
+```astro
+<Acordion
+      acordionConteiner="w-96 flex flex-col justify-center items-center m-auto"
+      styleHeader="bg-[#002f24] font-bold rounded-lg text-[#05ce91]"
+      styleContent="bg-neutral-950 rounded-lg"
+      tittleAcordion="Acordeon 1"
+      descriptionAcordion="esto deberia ser una descripcion mas larga para ver si funciona bien"
+    />
+```
+esto creara un acordion con el siguiente aspecto:
+
+<Acordion
+      acordionConteiner="w-96 flex flex-col justify-center items-center m-auto"
+      styleHeader="bg-[#002f24] font-bold rounded-lg text-[#05ce91]"
+      styleContent="bg-neutral-950 rounded-lg"
+      tittleAcordion="Acordeon 1"
+      descriptionAcordion="esto deberia ser una descripcion mas larga para ver si funciona bien"
+    />

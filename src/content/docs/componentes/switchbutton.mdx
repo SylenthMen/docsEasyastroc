@@ -1,0 +1,60 @@
+---
+title: SwitchButton
+description: Documentación del componente SwitchButton, que incluye el uso y las props que recibe.
+---
+
+import {SwitchButton} from 'easyastroc'
+
+# Componente SwitchButton
+
+El componente `SwitchButton` permite crear un botón de interruptor (toggle switch) que el usuario puede activar o desactivar. Es útil para opciones binarias, como activar o desactivar funciones en una aplicación.
+
+## Props
+
+- `id` (string): Un identificador único para el switch, útil para referencias en formularios o accesibilidad.
+- `name` (string): El nombre del control de entrada, utilizado para identificar el switch al enviarlo en un formulario.
+- `label` (string): El texto que se mostrará junto al switch, proporcionando contexto al usuario.
+- `checked` (boolean, opcional): Determina si el switch está activado (true) o desactivado (false) de forma predeterminada.
+- `disabled` (boolean, opcional): Si se establece en true, deshabilita el switch, impidiendo que el usuario interactúe con él.
+- `onChange` (function): Una función que se ejecutará cuando el estado del switch cambie. Proporciona el evento de cambio para realizar acciones específicas.
+- `switchClass` (string, opcional): Clases CSS personalizadas para estilizar el switch.
+- `labelClass` (string, opcional): Clases CSS personalizadas para estilizar la etiqueta del switch.
+
+## Ejemplo de uso
+
+A continuación, se muestra un ejemplo de cómo utilizar el componente `SwitchButton`:
+
+```astro
+<SwitchButton
+  id="switch1"
+  name="switch1"
+  label="Switch Básico"
+  onChange="console.log('Switch 1 cambiado:', event.target.checked)"
+/>
+
+<SwitchButton
+  id="switch2"
+  name="switch2"
+  label="Switch Preseleccionado"
+  checked={true}
+  onChange="console.log('Switch 2 cambiado:', event.target.checked)"
+/>
+
+<SwitchButton
+  id="switch3"
+  name="switch3"
+  label="Switch Deshabilitado"
+  disabled={true}
+  onChange="console.log('Switch 3 cambiado:', event.target.checked)"
+/>
+
+<SwitchButton
+  id="switch4"
+  name="switch4"
+  label="Switch Personalizado"
+  switchClass="bg-[#002f24] peer-checked:bg-purple-600"
+  labelClass="text-purple-600 font-bold"
+  onChange="console.log('Switch 4 cambiado:', event.target.checked)"
+/>
+```
+

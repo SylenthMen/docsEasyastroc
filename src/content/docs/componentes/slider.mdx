@@ -1,0 +1,55 @@
+---
+title: Slider
+description: Documentación del componente Slider, que incluye el uso y las props que recibe.
+---
+
+import {Slider} from 'easyastroc'
+
+# Componente Slider
+
+El componente `Slider` permite a los usuarios seleccionar un valor dentro de un rango específico mediante una barra deslizante. Es útil para ajustar configuraciones, como volúmenes, brillo, y otros parámetros que se pueden cuantificar.
+
+## Props
+
+- `min` (number): El valor mínimo que puede ser seleccionado por el slider.
+- `max` (number): El valor máximo que puede ser seleccionado por el slider.
+- `step` (number): La cantidad de cambio por cada movimiento del slider. Permite definir la precisión del ajuste.
+- `defaultValue` (number): El valor inicial que se mostrará cuando el componente sea renderizado.
+- `id` (string): Un identificador único para el slider, útil para referencias en formularios o accesibilidad.
+- `name` (string): El nombre del control de entrada, usado para identificar el slider al enviarlo en un formulario.
+- `labelText` (string): El texto que se mostrará como etiqueta para el slider, proporcionando contexto al usuario.
+- `sliderClass` (string): Clases CSS para personalizar el estilo de la barra del slider, como el color y el tamaño.
+- `labelClass` (string): Clases CSS para personalizar el estilo de la etiqueta del slider.
+- `valueClass` (string): Clases CSS para personalizar el estilo del texto que muestra el valor actual del slider.
+
+## Ejemplo de uso
+
+A continuación, un ejemplo de cómo utilizar el componente `Slider`:
+
+```astro
+<Slider
+  min={0}
+  max={100}
+  step={1}
+  defaultValue={50}
+  id="example-slider"
+  name="example-slider"
+  labelText="Ejemplo de Slider"
+  sliderClass="accent-[#05ce91] hover:accent-green-400 bg-[#002f24] w-96 h-2"
+  labelClass="text-white"
+  valueClass="font-semibold text-white"
+/>
+```
+## Apariencia
+<Slider
+  min={0}
+  max={100}
+  step={1}
+  defaultValue={50}
+  id="example-slider"
+  name="example-slider"
+  labelText="Ejemplo de Slider"
+  sliderClass="accent-[#05ce91] hover:accent-green-400 bg-[#002f24] w-96 h-2"
+  labelClass="text-white"
+  valueClass="font-semibold text-white"
+/>

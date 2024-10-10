@@ -1,0 +1,30 @@
+---
+title: Formulario De Contacto
+description: Documentación del componente FormularioContacto, que incluye el uso y las props que recibe.
+---
+
+import {FormularioContacto} from 'easyastroc'
+
+# Componente FormularioContacto
+
+El componente `FormularioContacto` permite crear un formulario de contacto estilizado, con opciones de personalización para el título, el formulario y las etiquetas de los campos. Es ideal para agregar un formulario en cualquier sección de un sitio web, como una página de contacto.
+
+## Props
+
+- `titleStyle` (string): Clases CSS para personalizar el estilo del título del formulario.
+- `titleFormulario` (string): El texto que aparecerá como título principal del formulario.
+- `styleFormulario` (string): Clases CSS para aplicar estilos personalizados al contenedor del formulario.
+- `colorLabel` (string): Clases CSS para estilizar las etiquetas (`label`) de los campos del formulario.
+
+## Ejemplo de uso
+
+A continuación, un ejemplo de cómo utilizar el componente `FormularioContacto`:
+
+```astro
+<FormularioContacto
+  titleStyle="text-white font-bold text-3xl mb-6 text-center"
+  titleFormulario="Contáctanos"
+  styleFormulario="bg-gradient-to-r from-[#05ce9135] to-indigo-600/35 backdrop-blur-sm"
+  colorLabel="text-white"
+/>
+```

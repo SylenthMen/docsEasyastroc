@@ -1,0 +1,30 @@
+---
+title: Avatar
+description: Documentación del componente Avatar, que incluye el uso y las props que recibe.
+---
+
+import {Avatar} from 'easyastroc'
+
+# Componente Avatar
+
+El componente `Avatar` se utiliza para mostrar una imagen de perfil o logotipo, y puede incluir un fallback (reemplazo) en caso de que la imagen no esté disponible.
+
+## Props
+
+- `name` (string): Un texto alternativo o descripción de la imagen, que también puede ser utilizado para propósitos de accesibilidad.
+- `image` (string): La URL de la imagen que se mostrará en el avatar.
+- `fallback` (string): Un texto o símbolo que se mostrará si la imagen no está disponible.
+- `size` (string): Clases CSS para definir el tamaño del avatar (ej: `w-16 h-16`).
+
+## Ejemplo de uso
+
+A continuación, un ejemplo de cómo utilizar el componente `Avatar`:
+
+```astro
+<Avatar
+  name="imagen del logotipo de Skull Island Records"
+  image=""
+  fallback="avatar"
+  size="w-16 h-16"
+/>
+```

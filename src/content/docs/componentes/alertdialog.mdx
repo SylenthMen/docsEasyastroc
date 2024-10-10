@@ -1,0 +1,47 @@
+---
+title: AlertDialog
+description: Documentación del componente AlertDialog, con el uso y las props que recibe.
+---
+
+import {AlertDialog} from 'easyastroc'
+
+# Componente AlertDialog
+
+El componente `AlertDialog` permite mostrar un cuadro de diálogo o alerta personalizada. A través de sus props, puedes personalizar tanto el diseño del cuadro de diálogo como el estilo del botón de cierre.
+
+## Props
+
+- `styleDialog` (string): Clases CSS para estilizar el contenedor del cuadro de diálogo.
+- `colorTitle` (string): Clases CSS para aplicar al título de la alerta.
+- `colorText` (string): Clases CSS para el texto de la alerta.
+- `styleButtonDialog` (string): Clases CSS para estilizar el botón de cierre del cuadro de diálogo.
+- `tittleAlert` (string): El título que se mostrará en el cuadro de diálogo.
+- `textButton` (string): El texto que aparecerá en el botón de cierre.
+- `descriptionAlert` (string): El texto de la descripción o el contenido de la alerta.
+
+## Ejemplo de uso
+
+A continuación, un ejemplo de cómo utilizar el componente `AlertDialog`:
+
+```astro
+<AlertDialog
+  styleDialog="bg-[#002f24] text-[#05ce91] rounded-lg w-96"
+  colorTitle="text-[#05ce91]"
+  colorText="text-[#05ce91]"
+  styleButtonDialog="border border-[#05ce91] hover:bg-[#002f24] hover:text-[#05ce91] text-white font-bold py-2 px-4 rounded"
+  tittleAlert="Título de la alerta"
+  textButton="Cerrar"
+  descriptionAlert="Aquí va el texto de la alerta"
+/>
+```
+
+## Apariencia
+<AlertDialog
+  styleDialog="bg-[#002f24] text-[#05ce91] rounded-lg w-96"
+  colorTitle="text-[#05ce91]"
+  colorText="text-[#05ce91]"
+  styleButtonDialog="border border-[#05ce91] hover:bg-[#002f24] hover:text-[#05ce91] text-white font-bold py-2 px-4 rounded"
+  tittleAlert="Título de la alerta"
+  textButton="Cerrar"
+  descriptionAlert="Aquí va el texto de la alerta"
+/>

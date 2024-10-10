@@ -1,0 +1,34 @@
+---
+title: Boton
+description: Documentación del componente Button, que incluye el uso y las props que recibe.
+---
+
+import {Button} from 'easyastroc'
+
+# Componente Button
+
+El componente `Button` es un botón reutilizable que permite personalizar el texto y el color del texto. Puede ser utilizado dentro de un enlace (`<a>`) o de forma independiente.
+
+## Props
+
+- `nameButton` (string): El texto que aparecerá dentro del botón.
+- `colorText` (string): Clases CSS para estilizar el color del texto del botón.
+
+## Ejemplo de uso
+
+A continuación, un ejemplo de cómo utilizar el componente `Button` dentro de un enlace y de forma independiente:
+
+```astro
+<a href="enlace">
+  <Button nameButton="continuar" colorText="text-[#05ce91]" />
+</a>
+
+<Button nameButton="continuar" colorText="text-[#05ce91]" />
+```
+
+## Apariencia
+<a href="enlace">
+  <Button nameButton="con enlace" colorText="text-[#05ce91]" />
+</a>
+
+<Button nameButton="sin enlace" colorText="text-[#05ce91]" />

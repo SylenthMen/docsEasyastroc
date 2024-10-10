@@ -1,0 +1,27 @@
+---
+title: CheckBox
+description: Documentación del componente CheckBox, que incluye el uso y las props que recibe.
+---
+
+import {CheckBox} from 'easyastroc'
+
+# Componente CheckBox
+
+El componente `CheckBox` permite a los usuarios seleccionar o deseleccionar una opción, como aceptar términos y condiciones. Es completamente personalizable mediante estilos y puede incluir un título descriptivo.
+
+## Props
+
+- `tittleCheckBox` (string): El texto que describe la opción relacionada con el checkbox.
+- `styleCheckBox` (string): Clases CSS para aplicar estilos personalizados al checkbox.
+
+## Ejemplo de uso
+
+A continuación, un ejemplo de cómo utilizar el componente `CheckBox`:
+
+```astro
+<CheckBox
+  tittleCheckBox="Aceptar términos y condiciones"
+  styleCheckBox="w-6 h-6 checked:bg-green-500 rounded-md border checked:after:content-['✅']"
+/>
+```
+

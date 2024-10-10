@@ -1,0 +1,43 @@
+---
+title: Input
+description: Documentación del componente Input, que incluye el uso y las props que recibe.
+---
+
+import {Input} from 'easyastroc'
+
+# Componente Input
+
+El componente `Input` permite crear un campo de entrada de datos personalizable, con opciones para cambiar el estilo del campo y la etiqueta, el tipo de entrada y más. Es útil para capturar información del usuario, como texto, archivos, números, etc.
+
+## Props
+
+- `labelInput` (string): El texto que se mostrará como la etiqueta del campo de entrada.
+- `placeHolder` (string): El texto que aparecerá como marcador de posición dentro del campo de entrada.
+- `styleLabel` (string): Clases CSS para personalizar el estilo de la etiqueta.
+- `styleInput` (string): Clases CSS para personalizar el estilo del campo de entrada.
+- `inputType` (string): El tipo de entrada que aceptará el campo (por ejemplo, `text`, `email`, `file`, etc.).
+- `fileAcepted` (string): Los tipos de archivos aceptados si el `inputType` es de tipo `file`.
+
+## Ejemplo de uso
+
+A continuación, un ejemplo de cómo utilizar el componente `Input`:
+
+```astro
+<Input
+  labelInput="Nombre del input:"
+  placeHolder="Aquí va lo que necesitas"
+  styleLabel="text-white"
+  styleInput="bg-[#002f24] text-[#05ce91] p-4 rounded-md text-md focus:outline-none"
+  inputType="text"
+  fileAcepted="*"
+/>
+```
+## Apariencia
+<Input
+  labelInput="Nombre del input:"
+  placeHolder="Aquí va lo que necesitas"
+  styleLabel="text-white"
+  styleInput="bg-[#002f24] text-[#05ce91] p-4 rounded-md text-md focus:outline-none"
+  inputType="text"
+  fileAcepted="*"
+/>

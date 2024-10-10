@@ -1,0 +1,42 @@
+---
+title: Acordion
+description: Acordion html css y js de facil implementacion | easyastroc
+---
+
+import {Acordion} from 'easyastroc'
+
+
+
+# Componente Acordion
+
+El componente `Acordion` te permite crear secciones colapsables en tu interfaz. Es flexible y puedes personalizarlo utilizando las siguientes propiedades (props).
+
+## Props
+
+- `acordionConteiner` (string): Clases CSS para estilizar el contenedor del acordeón.
+- `styleHeader` (string): Clases CSS o estilos en línea para aplicar al encabezado del acordeón.
+- `styleContent` (string): Clases CSS o estilos en línea para el contenido que se muestra al desplegar el acordeón.
+- `tittleAcordion` (string): El título que aparecerá en el encabezado del acordeón.
+- `descriptionAcordion` (string): El contenido que se desplegará al abrir el acordeón.
+
+## Ejemplo de uso
+
+A continuación, un ejemplo de cómo utilizar el componente `Acordion`:
+
+```astro
+<Acordion
+  acordionConteiner="w-96 flex flex-col justify-center items-center m-auto"
+  styleHeader="bg-[#002f24] font-bold rounded-lg text-[#05ce91]"
+  styleContent="bg-neutral-950 rounded-lg"
+  tittleAcordion="Acordeón 1"
+  descriptionAcordion="Esto debería ser una descripción más larga para ver si funciona bien."
+/>
+```
+## Apariencia
+<Acordion
+      acordionConteiner="w-96 flex flex-col justify-center items-center m-auto"
+      styleHeader="bg-[#002f24] font-bold rounded-lg text-[#05ce91]"
+      styleContent="bg-neutral-950 rounded-lg"
+      tittleAcordion="Acordeon 1"
+      descriptionAcordion="esto deberia ser una descripcion mas larga para ver si funciona bien"
+    />

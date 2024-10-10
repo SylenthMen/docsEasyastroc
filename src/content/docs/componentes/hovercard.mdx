@@ -1,0 +1,36 @@
+---
+title: HoverCard
+description: Documentación del componente HoverCard, que incluye el uso y las props que recibe.
+---
+
+import {HoverCard} from 'easyastroc'
+
+# Componente HoverCard
+
+El componente `HoverCard` permite mostrar información adicional cuando el usuario pasa el mouse sobre un elemento desencadenante (trigger). Es útil para mostrar detalles emergentes de una manera elegante y sin ocupar espacio adicional en la interfaz hasta que sea necesario.
+
+## Props
+
+- `widthCard` (string): Clases CSS para definir el ancho de la tarjeta emergente.
+- `colorCard` (string): Clases CSS para personalizar el color de fondo y el texto de la tarjeta.
+- `triggerText` (string): El texto que actuará como el desencadenante para mostrar el `HoverCard`.
+- `title` (string): El título que se mostrará dentro de la tarjeta cuando se active el hover.
+- `description` (string): La descripción o contenido principal que aparecerá dentro de la tarjeta.
+
+## Ejemplo de uso
+
+A continuación, un ejemplo de cómo utilizar el componente `HoverCard`:
+
+```astro
+<p class="mb-4">
+  Pasa el mouse sobre
+  <HoverCard
+    widthCard="w-24"
+    colorCard="bg-neutral-950/55 text-white backdrop-blur-sm"
+    triggerText="este texto"
+    title="Información Adicional"
+    description="Este es un ejemplo de HoverCard que muestra información adicional al pasar el mouse sobre el texto."
+  />
+  para ver el HoverCard en acción.
+</p>
+```

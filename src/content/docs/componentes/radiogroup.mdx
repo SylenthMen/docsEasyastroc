@@ -1,0 +1,46 @@
+---
+title: RadioGroup
+description: Documentación del componente RadioGroup, que incluye el uso y las props que recibe.
+---
+
+import {RadioGroup} from 'easyastroc'
+
+# Componente RadioGroup
+
+El componente `RadioGroup` permite crear un conjunto de opciones seleccionables (radio buttons) donde el usuario puede elegir solo una opción. Es ideal para formularios o encuestas en los que se requiere que el usuario seleccione entre varias alternativas.
+
+## Props
+
+- `name` (string): El nombre que se asignará al grupo de opciones de radio. Es importante para la agrupación de las opciones.
+- `options` (array): Un array de objetos, donde cada objeto representa una opción con las propiedades `value` y `label`.
+  - `value` (string): El valor que representa la opción seleccionada.
+  - `label` (string): El texto que se mostrará junto a cada opción de radio.
+- `defaultValue` (string): El valor por defecto que estará seleccionado cuando se renderiza el componente.
+
+## Ejemplo de uso
+
+A continuación, un ejemplo de cómo utilizar el componente `RadioGroup`:
+
+```astro
+<RadioGroup
+  name="opcion"
+  options={[
+    { value: "1", label: "opcion 1" },
+    { value: "2", label: "opcion 2" },
+    { value: "3", label: "opcion 3" },
+    { value: "4", label: "opcion 4" }
+  ]}
+  defaultValue="1"
+/>
+```
+## Apariencia
+<RadioGroup
+  name="opcion"
+  options={[
+    { value: "1", label: "opcion 1" },
+    { value: "2", label: "opcion 2" },
+    { value: "3", label: "opcion 3" },
+    { value: "4", label: "opcion 4" }
+  ]}
+  defaultValue="1"
+/>

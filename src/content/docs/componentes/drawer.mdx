@@ -1,0 +1,55 @@
+---
+title: Drawer
+description: Documentación del componente Drawer, que incluye el uso y las props que recibe.
+---
+
+import {Drawer} from 'easyastroc'
+
+# Componente Drawer
+
+El componente `Drawer` es una ventana emergente lateral que permite mostrar contenido adicional, como menús o información, sin interrumpir la navegación principal. Es ideal para crear menús laterales, opciones de configuración o listas adicionales.
+
+## Props
+
+- `title` (string): El título del drawer que aparece en la parte superior.
+- `description` (string): Una breve descripción o subtítulo que aparece debajo del título.
+- `drawerStyle` (string): Clases CSS para aplicar estilos personalizados al contenedor del drawer.
+- `styleTitle` (string): Clases CSS para aplicar estilos al título del drawer.
+- `styleDescription` (string): Clases CSS para aplicar estilos a la descripción.
+
+## Ejemplo de uso
+
+A continuación, un ejemplo de cómo utilizar el componente `Drawer`:
+
+```astro
+<Drawer
+  title="Drawer"
+  description="Este es un ejemplo de drawer"
+  drawerStyle="bg-neutral-950 text-white"
+  styleTitle="text-white"
+  styleDescription="text-white"
+>
+  <p class="text-white">Contenido del drawer</p>
+  <ul class="text-white">
+    <li>Elemento A</li>
+    <li>Elemento B</li>
+    <li>Elemento C</li>
+  </ul>
+</Drawer>
+```
+
+## Apariencia
+<Drawer
+  title="Drawer"
+  description="Este es un ejemplo de drawer"
+  drawerStyle="bg-neutral-950 text-white"
+  styleTitle="text-white"
+  styleDescription="text-white"
+>
+  <p class="text-white">Contenido del drawer</p>
+  <ul class="text-white">
+    <li>Elemento A</li>
+    <li>Elemento B</li>
+    <li>Elemento C</li>
+  </ul>
+</Drawer>
