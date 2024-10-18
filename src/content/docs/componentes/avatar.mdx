@@ -4,6 +4,7 @@ description: Documentación del componente Avatar, que incluye el uso y las prop
 ---
 
 import {Avatar} from 'easyastroc'
+import { Aside } from '@astrojs/starlight/components';
 
 # Componente Avatar
 
@@ -28,3 +29,11 @@ A continuación, un ejemplo de cómo utilizar el componente `Avatar`:
   size="w-16 h-16"
 />
 ```
+<Avatar
+  name="imagen del logotipo de Skull Island Records"
+  image=""
+  fallback="avatar"
+  size="w-16 h-16 rounded-full"
+/>
+
+<Aside type='caution'>La apariencia puede ser diferente a como se ve realmente en una pagina astro</Aside>
