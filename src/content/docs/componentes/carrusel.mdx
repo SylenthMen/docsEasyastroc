@@ -1,0 +1,33 @@
+---
+title: Carrusel
+description: El componente `Carrusel` permite mostrar un conjunto de imágenes en un carrusel, con opciones para personalizar el ancho del contenedor.
+---
+
+import  {Carrusel}  from 'easyastroc';
+
+## Carrusel
+
+El componente `Carrusel` permite la visualización de múltiples imágenes en formato de carrusel. Puedes controlar el ancho del contenedor y pasar un array de imágenes que se mostrarán de manera deslizante.
+
+### Props
+
+| Propiedad          | Tipo      | Descripción                                                             |
+|--------------------|-----------|-------------------------------------------------------------------------|
+| `images`           | `Array`   | Un array de objetos que contienen la URL y la descripción de cada imagen.|
+| `containerWidth`   | `string`  | Clase de Tailwind que define el ancho del contenedor del carrusel.       |
+
+### Ejemplo de uso
+
+```astro
+---
+import {Carrusel} from "easyastroc";
+
+const images = [
+  { src: "/1.jpeg", alt: "Descripción de la imagen 1" },
+  { src: "/2.jpeg", alt: "Descripción de la imagen 2" },
+  { src: "/3.jpeg", alt: "Descripción de la imagen 3" },
+  // Añadir más imágenes si es necesario
+];
+---
+<Carrusel images={images} containerWidth="w-96" />
+```

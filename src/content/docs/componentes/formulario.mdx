@@ -1,30 +1,59 @@
 ---
-title: Formulario De Contacto
-description: Documentación del componente FormularioContacto, que incluye el uso y las props que recibe.
+title: FormularioContacto
+description: El componente `FormularioContacto` es un formulario de contacto personalizable que permite a los usuarios enviar información a través de diferentes campos, con un botón de acción.
 ---
-
 import {FormularioContacto} from 'easyastroc'
+import {Button} from 'easyastroc'
 
-# Componente FormularioContacto
 
-El componente `FormularioContacto` permite crear un formulario de contacto estilizado, con opciones de personalización para el título, el formulario y las etiquetas de los campos. Es ideal para agregar un formulario en cualquier sección de un sitio web, como una página de contacto.
+## FormularioContacto
 
-## Props
+El componente `FormularioContacto` permite crear formularios de contacto personalizables, con un título, estilos y campos de entrada. Incluye un botón de envío que puede ser personalizado y gestionado con eventos.
 
-- `titleStyle` (string): Clases CSS para personalizar el estilo del título del formulario.
-- `titleFormulario` (string): El texto que aparecerá como título principal del formulario.
-- `styleFormulario` (string): Clases CSS para aplicar estilos personalizados al contenedor del formulario.
-- `colorLabel` (string): Clases CSS para estilizar las etiquetas (`label`) de los campos del formulario.
+### Props
 
-## Ejemplo de uso
+| Propiedad         | Tipo      | Descripción                                                                                                                                           |
+|-------------------|-----------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `titleStyle`      | `string`  | Clases CSS para estilizar el título del formulario, como colores, tamaño de fuente y alineación.                                                        |
+| `titleFormulario` | `string`  | El título que aparecerá en la parte superior del formulario, generalmente indicando su propósito.                                                       |
+| `styleFormulario` | `string`  | Clases de Tailwind para estilizar el contenedor del formulario, como colores de fondo, bordes y efectos visuales (ej: `backdrop-blur`).                  |
+| `colorLabel`      | `string`  | Clases de Tailwind para definir el color de las etiquetas de los campos de entrada del formulario.                                                      |
+| `styleInput`      | `string`  | Clases de Tailwind CSS para personalizar los campos de entrada del formulario, incluyendo colores, espaciado y comportamiento del foco (`focus`).        |
 
-A continuación, un ejemplo de cómo utilizar el componente `FormularioContacto`:
+### Ejemplo de uso
 
 ```astro
 <FormularioContacto
   titleStyle="text-white font-bold text-3xl mb-6 text-center"
-  titleFormulario="Contáctanos"
-  styleFormulario="bg-gradient-to-r from-[#05ce9135] to-indigo-600/35 backdrop-blur-sm"
+  titleFormulario="Contactanos"
+  styleFormulario="bg-gradient-to-r from-[#05ce9135] to-indigo-600/35 backdrop-blur-sm p-2 w-96"
   colorLabel="text-white"
-/>
+  styleInput="bg-white text-black focus:outline-none px-3 py-2 "
+>
+  <Button
+    nameButton="Enviar"
+    colorText="text-white"
+    colorBackground="bg-green-600"
+    colorBorder="border-blue-600"
+    styleButton="w-full"
+    onClick="alert('mensaje enviado');"
+  />
+</FormularioContacto>
 ```
+
+<FormularioContacto
+  titleStyle="text-white font-bold text-3xl mb-6 text-center"
+  titleFormulario="Contactanos"
+  styleFormulario="bg-gradient-to-r from-[#05ce9135] to-indigo-600/35 backdrop-blur-sm p-2 w-96"
+  colorLabel="text-white"
+  styleInput="bg-white text-black focus:outline-none px-3 py-2 "
+>
+  <Button
+    nameButton="Enviar"
+    colorText="text-white"
+    colorBackground="bg-green-600"
+    colorBorder="border-blue-600"
+    styleButton="w-full"
+    onClick="alert('mensaje enviado');"
+  />
+</FormularioContacto>

@@ -1,44 +1,126 @@
 ---
 title: Card
-description: Documentación del componente Card, que incluye el uso y las props que recibe.
+description: El componente `Card` permite mostrar una tarjeta con un título, descripción, imagen, y contenido adicional. Es completamente personalizable en cuanto a estilo y funcionalidad.
 ---
 
-import {Card} from 'easyastroc'
+import { Card } from 'easyastroc'
+import { Button } from 'easyastroc'
 
-# Componente Card
+## Card
 
-El componente `Card` se utiliza para mostrar contenido visualmente atractivo en forma de una tarjeta. Cada tarjeta incluye una imagen, un título, una descripción y permite personalizar el estilo del contenedor, el título y la descripción.
+El componente `Card` permite crear tarjetas informativas que pueden incluir un título, descripción, imagen y contenido adicional. Los estilos de la tarjeta, título y descripción pueden ser modificados a través de las props para adaptarse a diferentes diseños.
 
-## Props
+### Props
 
-- `title` (string): El título que aparecerá en la tarjeta.
-- `description` (string): La descripción que se mostrará en el cuerpo de la tarjeta.
-- `image` (string): La URL de la imagen que se mostrará en la parte superior de la tarjeta.
-- `cardStyle` (string): Clases CSS para aplicar estilos personalizados al contenedor de la tarjeta.
-- `titleStyle` (string): Clases CSS para estilizar el título de la tarjeta.
-- `descriptionStyle` (string): Clases CSS para estilizar la descripción de la tarjeta.
+| Propiedad           | Tipo     | Descripción                                                                |
+|---------------------|----------|----------------------------------------------------------------------------|
+| `title`             | `string` | Título que aparecerá en la parte superior de la tarjeta.                    |
+| `description`       | `string` | Descripción que se mostrará bajo el título.                                 |
+| `image`             | `string` | URL de la imagen que aparecerá en la tarjeta.                               |
+| `cardStyle`         | `string` | Clases de Tailwind para personalizar el estilo de la tarjeta.               |
+| `titleStyle`        | `string` | Clases de Tailwind para personalizar el estilo del título.                  |
+| `descriptionStyle`  | `string` | Clases de Tailwind para personalizar el estilo de la descripción.           |
 
-## Ejemplo de uso
-
-A continuación, un ejemplo de cómo utilizar el componente `Card`:
+### Ejemplo de uso
 
 ```astro
 <Card
-  title="Título de la tarjeta"
-  description="Hola, soy una descripción de la tarjeta"
+  title="Titulo de la tarjeta"
+  description="hola soy una descripcion de la tarjeta"
   image="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
-  cardStyle="bg-[#002f24] backdrop-blur-md text-[#05ce91]"
+  cardStyle="bg-[#002f24] backdrop-blur-md text-[#05ce91] max-w-96 w-full"
   titleStyle="text-[#05ce91] font-bold text-2xl"
   descriptionStyle="text-[#05ce91]"
-/>
+>
+  <p class="text-white/85 text-sm">
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem eius
+    quidem reprehenderit, doloremque ex non?
+  </p>
+  <div class="mt-4">
+    <div class="flex flex-col items-end justify-center">
+      <Button
+        nameButton=""
+        colorText="text-white"
+        styleButton="flex items-center justify-center gap-x-2"
+        colorBackground="bg-green-600"
+        colorBorder="border-blue-600"
+        onClick="alert('agregado al carrito');"
+        styleButton="p-2"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="18"
+          height="18"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="icon icon-tabler icon-tabler-outline icon-tabler-garden-cart"
+        >
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+          <path
+            d="M17.5 17.5m-2.5 0a2.5 2.5 0 1 0 5 0a2.5 2.5 0 1 0 -5 0"
+          ></path>
+          <path
+            d="M6 8v11a1 1 0 0 0 1.806 .591l3.694 -5.091v.055"
+          ></path>
+          <path
+            d="M6 8h15l-3.5 7l-7.1 -.747a4 4 0 0 1 -3.296 -2.493l-2.853 -7.13a1 1 0 0 0 -.928 -.63h-1.323"
+          ></path>
+        </svg>
+      </Button>
+    </div>
+  </div>
+</Card>
 ```
-
-## Apariencia
 <Card
-  title="Título de la tarjeta"
-  description="Hola, soy una descripción de la tarjeta"
+  title="Titulo de la tarjeta"
+  description="hola soy una descripcion de la tarjeta"
   image="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
-  cardStyle="bg-[#002f24] backdrop-blur-md text-[#05ce91] overflow-hidden w-96 "
+  cardStyle="bg-[#002f24] backdrop-blur-md text-[#05ce91] max-w-96 w-full"
   titleStyle="text-[#05ce91] font-bold text-2xl"
   descriptionStyle="text-[#05ce91]"
-/>
+>
+  <p class="text-white/85 text-sm">
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem eius
+    quidem reprehenderit, doloremque ex non?
+  </p>
+  <div class="mt-4">
+    <div class="flex flex-col items-end justify-center">
+      <Button
+        nameButton=""
+        colorText="text-white"
+        styleButton="flex items-center justify-center gap-x-2 p-2 w-24"
+        colorBackground="bg-green-600"
+        colorBorder="border-blue-600"
+        onClick="alert('agregado al carrito');"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="18"
+          height="18"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="icon icon-tabler icon-tabler-outline icon-tabler-garden-cart"
+        >
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+          <path
+            d="M17.5 17.5m-2.5 0a2.5 2.5 0 1 0 5 0a2.5 2.5 0 1 0 -5 0"
+          ></path>
+          <path
+            d="M6 8v11a1 1 0 0 0 1.806 .591l3.694 -5.091v.055"
+          ></path>
+          <path
+            d="M6 8h15l-3.5 7l-7.1 -.747a4 4 0 0 1 -3.296 -2.493l-2.853 -7.13a1 1 0 0 0 -.928 -.63h-1.323"
+          ></path>
+        </svg>
+      </Button>
+    </div>
+  </div>
+</Card>

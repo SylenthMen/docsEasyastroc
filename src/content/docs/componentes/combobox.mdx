@@ -1,47 +1,47 @@
 ---
 title: ComboBox
-description: Documentación del componente ComboBox, que incluye el uso y las props que recibe.
+description: El componente `ComboBox` es un campo desplegable personalizable que permite a los usuarios seleccionar una opción de una lista.
 ---
 
-import {ComboBox} from 'easyastroc'
+## ComboBox
 
-# Componente ComboBox
+El componente `ComboBox` permite seleccionar una opción de una lista desplegable con varias posibilidades de personalización. Los usuarios pueden configurar las opciones y modificar las clases de estilo para ajustarse a sus necesidades.
 
-El componente `ComboBox` permite al usuario seleccionar una opción de una lista desplegable con estilos personalizados. Es ideal para formularios o situaciones donde se necesita seleccionar un valor entre varias opciones.
+### Props
 
-## Props
+| Propiedad         | Tipo      | Descripción                                                                                                                                         |
+|-------------------|-----------|-----------------------------------------------------------------------------------------------------------------------------------------------------|
+| `options`         | `Array`   | Un array de objetos que contienen el valor y la etiqueta de cada opción.                                                                             |
+| `titleComboBox`   | `string`  | El título del ComboBox, que generalmente es una breve descripción o indicación para el usuario.                                                      |
+| `textComboBox`    | `string`  | Texto que se muestra como marcador de posición cuando no se ha seleccionado ninguna opción.                                                          |
+| `widthCombo`      | `string`  | Clase de Tailwind que define el ancho del ComboBox.                                                                                                  |
+| `styleCombo`      | `string`  | Clases CSS de Tailwind para estilizar el contenedor del ComboBox.                                                                                    |
+| `styleBoxOptions` | `string`  | Clases CSS para estilizar el contenedor que contiene las opciones desplegables.                                                                      |
+| `styleOptions`    | `string`  | Clases CSS aplicadas a cada opción dentro del desplegable, como el color del texto y el comportamiento al pasar el ratón por encima (`hover`).        |
+| `styleInput`      | `string`  | Clases CSS para estilizar el campo de entrada, que incluye bordes, colores y estilos de foco.                                                        |
 
-- `titleComboBox` (string): El título que describe el propósito del ComboBox.
-- `textComboBox` (string): El texto que aparece como placeholder en el campo de entrada del ComboBox.
-- `styleCombo` (string): Clases CSS para personalizar el estilo del contenedor del ComboBox.
-- `styleInput` (string): Clases CSS para estilizar el campo de entrada del ComboBox.
-- `styleBoxOptions` (string): Clases CSS para estilizar el contenedor de las opciones desplegables.
-- `styleOptions` (string): Clases CSS para estilizar cada opción individual dentro del ComboBox.
-- `widthCombo` (string): Clases CSS para definir el ancho del ComboBox.
-
-## Ejemplo de uso
-
-A continuación, un ejemplo de cómo utilizar el componente `ComboBox`:
+### Ejemplo de uso
 
 ```astro
+---
+const languages = [
+  { value: "javascript", label: "JavaScript" },
+  { value: "python", label: "Python" },
+  { value: "java", label: "Java" },
+  { value: "csharp", label: "C#" },
+  { value: "php", label: "PHP" },
+  { value: "ruby", label: "Ruby" },
+  { value: "go", label: "Go" },
+  { value: "typescript", label: "TypeScript" },
+];
+---
 <ComboBox
-  titleComboBox="Elige tu lenguaje favorito:"
-  textComboBox="Selecciona un lenguaje de programación"
-  styleCombo="bg-neutral-950 text-white"
-  styleInput="border-b border-neutral-800 bg-neutral-800 text-purple-500 focus:outline-none"
-  styleBoxOptions="bg-neutral-950 text-white"
-  styleOptions="text-[#05ce91] hover:bg-[#002f24] cursor-pointer"
+  options={languages}
+  titleComboBox="Choose a language"
+  textComboBox="Select a language"
   widthCombo="w-96"
-/>
-```
-## Apariencia
-
-<ComboBox
-  titleComboBox="Elige tu lenguaje favorito:"
-  textComboBox="Selecciona un lenguaje de programación"
   styleCombo="bg-neutral-950 text-white"
-  styleInput="border-b border-neutral-800 bg-neutral-800 text-purple-500 focus:outline-none"
-  styleBoxOptions="bg-neutral-950 text-white"
-  styleOptions="text-[#05ce91] hover:bg-[#002f24] cursor-pointer"
-  widthCombo="w-96"
+  styleBoxOptions="bg-neutral-950"
+  styleOptions="text-white hover:bg-[#002f24] cursor-pointer"
+  styleInput="border-b border-neutral-800 bg-neutral-800 text-white focus:outline-none"
 />

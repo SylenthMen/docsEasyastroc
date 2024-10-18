@@ -1,34 +1,42 @@
 ---
 title: Boton
-description: Documentación del componente Button, que incluye el uso y las props que recibe.
+description: El componente `Button` permite crear un botón con estilos personalizados y acciones específicas. Este componente es altamente flexible y se puede adaptar a diferentes casos de uso.
 ---
 
-import {Button} from 'easyastroc'
+import { Button } from 'easyastroc'
 
-# Componente Button
+## Button
 
-El componente `Button` es un botón reutilizable que permite personalizar el texto y el color del texto. Puede ser utilizado dentro de un enlace (`<a>`) o de forma independiente.
+El componente `Button` es un botón interactivo que permite a los usuarios realizar acciones en la página. Los estilos del botón, como los colores de texto, fondo y borde, se pueden personalizar a través de las props, además de definir el comportamiento cuando el botón es clicado.
 
-## Props
+### Props
 
-- `nameButton` (string): El texto que aparecerá dentro del botón.
-- `colorText` (string): Clases CSS para estilizar el color del texto del botón.
+| Propiedad        | Tipo     | Descripción                                                 |
+|------------------|----------|-------------------------------------------------------------|
+| `nameButton`     | `string` | Texto que aparecerá en el botón.                            |
+| `colorText`      | `string` | Clases de Tailwind para personalizar el color del texto.     |
+| `colorBackground`| `string` | Clases de Tailwind para personalizar el color de fondo.      |
+| `colorBorder`    | `string` | Clases de Tailwind para personalizar el color del borde.     |
+| `onClick`        | `string` | Función a ejecutar cuando se hace clic en el botón.          |
 
-## Ejemplo de uso
-
-A continuación, un ejemplo de cómo utilizar el componente `Button` dentro de un enlace y de forma independiente:
+### Ejemplo de uso
 
 ```astro
-<a href="enlace">
-  <Button nameButton="continuar" colorText="text-[#05ce91]" />
-</a>
-
-<Button nameButton="continuar" colorText="text-[#05ce91]" />
+<Button
+  nameButton="Click me"
+  colorText="text-white"
+  colorBackground="bg-green-600"
+  colorBorder="border-blue-600"
+  onClick="console.log('Button clicked!')"
+  styleButton="p-2"
+/>
 ```
-
 ## Apariencia
-<a href="enlace">
-  <Button nameButton="con enlace" colorText="text-[#05ce91]" />
-</a>
-
-<Button nameButton="sin enlace" colorText="text-[#05ce91]" />
+<Button
+  nameButton="Click me"
+  colorText="text-white"
+  colorBackground="bg-green-600"
+  colorBorder="border-blue-600"
+  onClick="console.log('Button clicked!')"
+  styleButton="p-2"
+/>
